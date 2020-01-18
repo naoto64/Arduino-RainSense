@@ -45,14 +45,18 @@ void loop () {
 ## Usage
 
     Method
-    RainSense RainSense (uint8_t pin)
+
+    ````cpp:RainSense RainSense (uint8_t pin)
+````
+
     pin: Analog pin number
     Create an instance
 
     value (byte samples)
     Returns the sensor value in bytes. Sensor values ​​range from 0 to 100. A higher value indicates a stronger response. It is recommended that you set a value of 40 or more because noise below 30 is affected by noise.
 
-rain (byte samples, byte threshold)
+````cpp:rain (byte samples, byte threshold)
+````
 Compares the value of the sensor with the threshold and returns the result as a boolean. The main specifications are the same as value. Returns 1 if the sensor value is above the threshold.
 
 ## License
