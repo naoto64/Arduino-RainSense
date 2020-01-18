@@ -8,7 +8,8 @@ This library can use a rain sensor to detect if it is raining. Since it is possi
 
 ## Demo
 
-````#include <RainSense.h>
+````cpp:example.ino
+#include <RainSense.h>
 #define delayTime 10
 RainSense rs = RainSense (A0);
 unsigned long time = 0;
