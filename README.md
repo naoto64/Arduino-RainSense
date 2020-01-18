@@ -46,7 +46,7 @@ void loop () {
 
     Method
 
-    ````cpp:example.ino
+````cpp:example.ino
 RainSense RainSense (uint8_t pin)
 ````
 
@@ -59,6 +59,7 @@ RainSense RainSense (uint8_t pin)
 ````cpp:example.ino
 rain (byte samples, byte threshold)
 ````
+
 Compares the value of the sensor with the threshold and returns the result as a boolean. The main specifications are the same as value. Returns 1 if the sensor value is above the threshold.
 
 ## License
