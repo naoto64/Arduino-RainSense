@@ -2,10 +2,12 @@ Arduino-RainSense
 ====
 
 ## Overview
+
 This is a rain sensor library for Arduino. Prepare two electrodes and connect them to GND and analog input pins.
 This library can use a rain sensor to detect if it is raining. Since it is possible to detect each drop of raindrops, it is possible to measure precipitation intensity, etc. If you do not have a rainfall sensor, you can make your own using aluminum tape.
 
 ## Demo
+
 ````#include <RainSense.h>
 #define delayTime 10
 RainSense rs = RainSense (A0);
@@ -40,6 +42,7 @@ void loop () {
 ````
 
 ## Usage
+
     Method
     RainSense RainSense (uint8_t pin)
     pin: Analog pin number
@@ -52,4 +55,5 @@ rain (byte samples, byte threshold)
 Compares the value of the sensor with the threshold and returns the result as a boolean. The main specifications are the same as value. Returns 1 if the sensor value is above the threshold.
 
 ## License
+
 MIT License
