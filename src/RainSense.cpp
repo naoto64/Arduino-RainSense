@@ -6,7 +6,7 @@
 
 RainSense::RainSense(uint8_t pin) {
   _pin = pin;
-  pinMode(pin, INPUT);
+  pinMode(pin, INPUT_PULLUP);
 }
 
 byte RainSense::value(byte samples) {
