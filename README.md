@@ -44,7 +44,7 @@ void loop () {
 
 ## Usage
 
-    Method
+#### Method
 
 ````cpp:example.ino
 RainSense RainSense (uint8_t pin)
