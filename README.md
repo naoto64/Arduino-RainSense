@@ -64,4 +64,4 @@ Compares the value of the sensor with the threshold and returns the result as a 
 
 ## License
 
-MIT License
+MIT
