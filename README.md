@@ -3,7 +3,7 @@ Arduino-RainSense
 
 ##Overview
 This is a rain sensor library for Arduino. Prepare two electrodes and connect them to GND and analog input pins.
-This library uses a rainfall sensor to detect if it is raining or not waving. Since it is possible to detect each drop of raindrops, it is possible to measure precipitation intensity, etc. If you do not have a rainfall sensor, you can make your own using aluminum tape.
+This library can use a rain sensor to detect if it is raining. Since it is possible to detect each drop of raindrops, it is possible to measure precipitation intensity, etc. If you do not have a rainfall sensor, you can make your own using aluminum tape.
 
 ## Demo
 ````#include <RainSense.h>
