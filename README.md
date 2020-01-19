@@ -16,7 +16,7 @@ unsigned long time = 0;
 int rainBool = 0;
 void setup () {
   Serial.begin (9600);
-  if (rs.rain (10, 40)) {
+  if (rs.rain (40)) {
     Serial.println ("It's raining");
     rainBool = 1;
   } else {
@@ -29,7 +29,7 @@ void loop () {
     rainBool = 0;
     Serial.println ("It is not raining.");
   }
-  if (rs.rain (10, 40)) {
+  if (rs.rain (40)) {
     if (rainBool == 0) {
       Serial.println ("It's raining");
       rainBool = 1;
@@ -53,11 +53,14 @@ RainSense RainSense (uint8_t pin)
     pin: Analog pin number
     Create an instance
 
-    value (byte samples)
+````cpp:example.ino
+value (byte samples=1, byte sensitivity=16)
+````
+
     Returns the sensor value in bytes. Sensor values ​​range from 0 to 100. A higher value indicates a stronger response. It is recommended that you set a value of 40 or more because noise below 30 is affected by noise.
 
 ````cpp:example.ino
-rain (byte samples, byte threshold)
+rain (byte threshold, byte samples=1, byte sensitivity=16)
 ````
 
 Compares the value of the sensor with the threshold and returns the result as a boolean. The main specifications are the same as value. Returns 1 if the sensor value is above the threshold.

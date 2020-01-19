@@ -7,7 +7,7 @@ int rainBool = 0;
 
 void setup() {
   Serial.begin(9600);
-  if(rs.rain(10, 40)){
+  if(rs.rain(40)){
     Serial.println("It's raining");
     rainBool = 1;
   }else{
@@ -21,7 +21,7 @@ void loop() {
     rainBool = 0;
     Serial.println("It is not raining.");
   }
-  if(rs.rain(10, 40)){
+  if(rs.rain(40)){
     if(rainBool == 0){
       Serial.println("It's raining");
       rainBool = 1;
