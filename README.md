@@ -57,7 +57,7 @@ RainSense RainSense (uint8_t pin)
 value (byte samples=1, byte sensitivity=16)
 ````
 
-    Returns the sensor value in bytes. Sensor values ​​range from 0 to 100. A higher value indicates a stronger response. It is recommended that you set a value of 40 or more because noise below 30 is affected by noise.
+    Returns the sensor value in bytes. Values range from 0 to 100. A higher value indicates a stronger response. samples is the number of samples. The larger the value, the better the accuracy, but the processing takes longer. sensitivity is the sensitivity correction. Increase if there is noise. The larger the value, the longer it takes to process.
 
 ````cpp:example.ino
 rain (byte threshold, byte samples=1, byte sensitivity=16)
