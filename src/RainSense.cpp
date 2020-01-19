@@ -9,7 +9,7 @@ RainSense::RainSense(uint8_t pin) {
   pinMode(pin, INPUT_PULLUP);
 }
 
-byte RainSense::value(byte samples=1, byte sensitivity=16) {
+byte RainSense::value(byte samples, byte sensitivity) {
   double val = 0;
   int sumXY = 0;
   int sumX = 0;
@@ -34,7 +34,7 @@ byte RainSense::value(byte samples=1, byte sensitivity=16) {
   return constrain((byte)(abs(val) * 100), 0, 100);
 }
 
-boolean RainSense::rain(byte threshold, byte samples=1, byte sensitivity=16) {
+boolean RainSense::rain(byte threshold, byte samples, byte sensitivity) {
 	if(value(sensitivity, samples) >= threshold) {
 		return 1;
 	} else {

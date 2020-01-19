@@ -8,8 +8,8 @@
 class RainSense {
 public:
   RainSense(uint8_t pin);
-  byte value(byte samples, byte sensitivity);
-  boolean rain(byte threshold, byte samples, byte sensitivity);
+  byte value(byte samples=1, byte sensitivity=16);
+  boolean rain(byte threshold, byte samples=1, byte sensitivity=16);
 
 private:
   uint8_t _pin;
