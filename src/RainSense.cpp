@@ -17,7 +17,7 @@ byte RainSense::value(byte samples) {
   int sumX2 = 0;
   int Y;
   for(int i = 0; i < samples; i++) {
-    Y = analogRead(_pin);
+    Y = 1023 - analogRead(_pin);
     sumXY += i * Y;
     sumX += i;
     sumY += Y;
