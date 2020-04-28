@@ -12,7 +12,6 @@ public:
 
 private:
   uint8_t _pin;
-  int getY(byte samples);
 };
 
 #endif
