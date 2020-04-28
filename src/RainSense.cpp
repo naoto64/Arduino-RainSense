@@ -10,7 +10,7 @@ RainSense::RainSense(uint8_t pin) {
 }
 
 byte RainSense::value(byte samples, byte sensitivity) {
-  double val = 0;
+  byte val = 0;
   int sumXY = 0;
   int sumX = 0;
   int sumY = 0;
@@ -30,8 +30,8 @@ byte RainSense::value(byte samples, byte sensitivity) {
     sumY += Y;
     sumX2 += pow(i, 2);
   }
-  val = (double)(sensitivity * sumXY - sumX * sumY) / (sensitivity * sumX2 - pow(sumX, 2));
-  return constrain((byte)(abs(val) * 100), 0, 100);
+  val = (sensitivity * sumXY - sumX * sumY) / (sensitivity * sumX2 - pow(sumX, 2));
+  return constrain(abs(val) * 100, 0, 100);
 }
 
 boolean RainSense::rain(byte threshold, byte samples, byte sensitivity) {
