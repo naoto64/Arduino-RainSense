@@ -3,7 +3,6 @@
  */
 #ifndef _RAIN_SENSE_H
 #define _RAIN_SENSE_H
-#include <Arduino.h>
 
 class RainSense {
 public:
