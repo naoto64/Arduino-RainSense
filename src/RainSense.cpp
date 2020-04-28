@@ -44,5 +44,5 @@ int RainSense::getY() {
 		Y -= analogRead(_pin);
 	}
 	Y /= samples;
-	return y
+	return y;
 }
