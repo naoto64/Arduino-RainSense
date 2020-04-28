@@ -20,11 +20,7 @@ byte RainSense::value(byte samples, byte sensitivity) {
     samples = 1;
   }
   for(int i = 0; i < sensitivity; i++) {
-    Y = 1023 * samples;
-    for (size_t j = 0; j < samples; j++) {
-      Y -= analogRead(_pin);
-    }
-    Y /= samples;
+    Y = getY();
     sumXY += i * Y;
     sumX += i;
     sumY += Y;
@@ -40,4 +36,13 @@ boolean RainSense::rain(byte threshold, byte samples, byte sensitivity) {
 	} else {
 		return 0;
 	}
+}
+
+int RainSense::getY() {
+	int Y = 1023 * samples;
+	for (size_t j = 0; j < samples; j++) {
+		Y -= analogRead(_pin);
+	}
+	Y /= samples;
+	return y
 }
