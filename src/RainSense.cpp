@@ -40,5 +40,4 @@ boolean RainSense::rain(byte threshold, byte samples, byte sensitivity) {
 	} else {
 		return 0;
 	}
-	return ;
 }
