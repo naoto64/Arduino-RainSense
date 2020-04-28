@@ -15,17 +15,10 @@ byte RainSense::value(byte samples, byte sensitivity) {
   int sumX = 0;
   int sumY = 0;
   int sumX2 = 0;
-  int Y;
   if(samples < 1){
     samples = 1;
   }
-  for(int i = 0; i < sensitivity; i++) {
-    Y = getY(samples);
-    sumXY += i * Y;
-    sumX += i;
-    sumY += Y;
-    sumX2 += pow(i, 2);
-  }
+  sum(samples, sensitivity, &sumXY, &sumX, &sumY, &sumX2);
   val = (sensitivity * sumXY - sumX * sumY) / (sensitivity * sumX2 - pow(sumX, 2));
   return constrain(abs(val) * 100, 0, 100);
 }
@@ -45,4 +38,15 @@ int RainSense::getY(byte samples) {
   }
   Y /= samples;
   return Y;
+}
+
+void RainSense::sum(byte samples, byte sensitivity, int *sumXY int *sumX, int *sumY, int *sumX2) {
+  int Y;
+  for(int i = 0; i < sensitivity; i++) {
+    Y = getY(samples);
+    *sumXY += i * Y;
+    *sumX += i;
+    *sumY += Y;
+    *sumX2 += pow(i, 2);
+  }
 }
