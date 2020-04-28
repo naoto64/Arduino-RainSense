@@ -32,7 +32,7 @@ boolean RainSense::rain(byte threshold, byte samples, byte sensitivity) {
   }
 }
 
-int RainSense::getY(byte samples) {
+int getY(byte samples) {
   int Y = 1023 * samples;
   for (size_t j = 0; j < samples; j++) {
     Y -= analogRead(_pin);
@@ -41,7 +41,7 @@ int RainSense::getY(byte samples) {
   return Y;
 }
 
-void RainSense::sum(byte samples, byte sensitivity, int sumXY, int sumX, int sumY, int sumX2) {
+void sum(byte samples, byte sensitivity, int* sumXY, int* sumX, int* sumY, int* sumX2) {
   for(int i = 0; i < sensitivity; i++) {
     int Y = getY(samples);
     *sumXY += i * Y;
