@@ -17,7 +17,7 @@ byte RainSense::value(byte samples, byte sensitivity) {
   if(samples < 1){
     samples = 1;
   }
-  sum(samples, sensitivity, &sumXY, &sumX, &sumY, &sumX2);
+  sum(samples, sensitivity, sumXY, sumX, sumY, sumX2);
   val = (sensitivity * sumXY - sumX * sumY) / (sensitivity * sumX2 - sumX * sumX);
   if(val < 0) val = 0;
   if(val > 100) val = 100;
