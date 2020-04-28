@@ -40,7 +40,7 @@ int RainSense::getY(byte samples) {
   return Y;
 }
 
-void RainSense::sum(byte samples, byte sensitivity, int *sumXY int *sumX, int *sumY, int *sumX2) {
+void RainSense::sum(byte samples, byte sensitivity, int *sumXY, int *sumX, int *sumY, int *sumX2) {
   int Y;
   for(int i = 0; i < sensitivity; i++) {
     Y = getY(samples);
