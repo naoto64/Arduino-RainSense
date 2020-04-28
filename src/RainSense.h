@@ -13,6 +13,7 @@ public:
 
 private:
   uint8_t _pin;
+  int getY();
 };
 
 #endif
