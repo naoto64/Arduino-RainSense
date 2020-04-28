@@ -1,7 +1,6 @@
 /*
  * RainSense.cpp
  */
-#include <Arduino.h>
 #include "RainSense.h"
 
 RainSense::RainSense(uint8_t pin) {
