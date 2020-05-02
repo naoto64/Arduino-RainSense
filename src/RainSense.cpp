@@ -32,7 +32,7 @@ byte RainSense::value(byte samples, byte sensitivity) {
 }
 
 boolean RainSense::rain(byte threshold, byte samples, byte sensitivity) {
-  if(value(sensitivity, samples) >= threshold) {
+  if(value(samples, sensitivity) >= threshold) {
     return 1;
   } else {
     return 0;
