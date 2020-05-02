@@ -12,7 +12,6 @@ public:
 
 private:
   int getY(byte samples);
-  void sum(byte samples, byte sensitivity, int* sumXY, int* sumX, int* sumY, int* sumX2);
   uint8_t _pin;
 };
 
