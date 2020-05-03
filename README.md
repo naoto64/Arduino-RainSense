@@ -8,7 +8,7 @@ This library can use a rain sensor to detect if it is raining. Since it is possi
 
 ## Demo
 
-![RainSense](https://github.com/naoto64/Arduino-RainSense/raw/master/RainSense.png)
+![RainSense](https://github.com/naoto64/Arduino-RainSense/blob/master/RainSense.png)
 
 ````cpp:example.ino
 #include <RainSense.h>
