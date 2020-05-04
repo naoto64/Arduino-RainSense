@@ -52,8 +52,8 @@ void loop () {
 RainSense RainSense (uint8_t pin)
 ````
 
-    pin: Analog pin number
-    Create an instance
+    pin: Analog pin number  
+    Create an instance.
 
 ````cpp:example.ino
 value (byte samples=1, byte sensitivity=16)
