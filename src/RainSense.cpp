@@ -32,8 +32,7 @@ byte RainSense::value(byte samples, byte sensitivity) {
 }
 
 boolean RainSense::rain(byte threshold, byte sensitivity) {
-  if(threshold > 100) threshold = 100;
-  if(analogRead(_pin) / 1023 * 100 >= 100 - threshold) {
+  if(analogRead(_pin) / 4 >= 255 - threshold) {
     return 1;
   } else {
     return 0;
